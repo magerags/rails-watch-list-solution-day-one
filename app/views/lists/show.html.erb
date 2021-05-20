@@ -12,6 +12,7 @@
       <%= link_to 'delete this list', list_path(@list), method: :delete, class: 'btn btn-cancel', data: { confirm: 'Are you sure you want to delete this list?' } %>
     </div>
   </div>
+
   <div class="row my-2">
     <% @list.movies.each do |movie| %>
       <% bookmark = Bookmark.find_by(list: @list, movie: movie) %>
